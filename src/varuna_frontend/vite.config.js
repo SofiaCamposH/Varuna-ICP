@@ -1,14 +1,21 @@
-import { fileURLToPath, URL } from 'url';
-import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';
-import environment from 'vite-plugin-environment';
+import react from '@vitejs/plugin-react';
+import { resolve } from 'path';
 import dotenv from 'dotenv';
+import environment from 'vite-plugin-environment';
 
 dotenv.config({ path: '../../.env' });
 
 export default defineConfig({
   build: {
     emptyOutDir: true,
+  },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@import "./src/styles/variables.scss";`
+      }
+    }
   },
   optimizeDeps: {
     esbuildOptions: {
@@ -24,6 +31,9 @@ export default defineConfig({
         changeOrigin: true,
       },
     },
+    headers: {
+      "Content-Security-Policy": "default-src 'self'; font-src 'self' data:; img-src 'self' data:; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';"
+    },
   },
   plugins: [
     react(),
@@ -33,11 +43,12 @@ export default defineConfig({
   resolve: {
     alias: [
       {
-        find: "declarations",
-        replacement: fileURLToPath(
-          new URL("../declarations", import.meta.url)
-        ),
+        find: 'declarations',
+        replacement: resolve(__dirname, '../declarations'),
       },
     ],
   },
 });
+
+
+
