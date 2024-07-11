@@ -28,12 +28,14 @@ const LandingPage = ({ onEnter }) => {
       <div className="fixed top-0 w-full z-50 bg-white shadow-md">
         <div className="menu flex justify-between p-6">
           <div className="logo">
-            <img src={varunaLogo} alt="logo" style={{ width: '60px', height: 'auto' }} />
+            <a href="#top">
+              <img src={varunaLogo} alt="logo" style={{ width: '60px', height: 'auto' }} />
+            </a>
           </div>
           <div className="barraDeNavegacion flex items-center space-x-10">
             <ul className="flex space-x-10">
-              <li>Inicio</li>
-              <li>¿Quiénes Somos?</li>
+              <li><a href="#quienes-somos">Inicio</a></li>
+              <li><a href="#beneficios">¿Quiénes Somos?</a></li>
             </ul>
             <ConnectButton />
             {isConnected && (
@@ -47,7 +49,7 @@ const LandingPage = ({ onEnter }) => {
       </div>
 
       {/* Sección de héroe */}
-      <div
+      <div id="top"
         className="hero flex justify-center items-center bg-cover bg-center min-h-screen"
         style={{ backgroundImage: `url(${varunaFondo})` }}
       >
@@ -66,7 +68,7 @@ const LandingPage = ({ onEnter }) => {
       </div>
 
       {/* Sección de contenido */}
-      <div className="container mx-auto p-6">
+      <div id="quienes-somos" className="container mx-auto p-6">
         <div className="flex flex-col md:flex-row items-center">
           {/* Texto */}
           <div className="md:w-1/2 p-4">
@@ -100,6 +102,28 @@ const LandingPage = ({ onEnter }) => {
         </p>
         <div>
           <ImageCarousel />
+        </div>
+      </section>
+
+      {/* Sección: Beneficios para el medio ambiente y la sociedad */}
+      <section id="beneficios" className="bg-blue-600 text-white py-16" style={{ backgroundColor: '#00ADED' }}>
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-semibold mb-4 text-center"> Beneficios para el medio ambiente<span className="text-blue-900"> y la sociedad</span></h2>
+          <div className="flex flex-col md:flex-row items-center md:items-start">
+            <div className="md:w-1/2 md:pr-8 text-center md:text-left">
+              <p className="max-w-3xl text-lg mb-8 text-black">
+                En Varuna, ofrecemos soluciones innovadoras que transforman las aguas residuales de las plantas tratadoras en recursos valiosos para empresas, agricultura y otros sectores industriales. Nuestra tecnología avanzada utiliza inteligencia artificial y sistemas de filtración especializados para eliminar eficazmente los microplásticos. Al recuperar y reciclar estas aguas tratadas, Varuna no solo ayuda a conservar los recursos hídricos esenciales, sino que también reduce significativamente la contaminación plástica en nuestros entornos acuáticos. Nuestro trabajo beneficia directamente a las comunidades al proporcionar un suministro de agua más limpio y seguro para el consumo humano y actividades económicas esenciales.
+              </p>
+            </div>
+            <div className="md:w-1/2 flex justify-center md:justify-start space-x-4">
+              <div className="w-64 h-64 bg-white rounded-lg shadow-lg overflow-hidden">
+                <img src={varunaFondo} alt="Imagen 4" className="w-full h-full object-cover" />
+              </div>
+              <div className="w-64 h-64 bg-white rounded-lg shadow-lg overflow-hidden">
+                <img src={naturaleza} alt="Imagen 5" className="w-full h-full object-cover" />
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
