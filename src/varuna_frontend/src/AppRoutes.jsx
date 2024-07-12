@@ -5,6 +5,7 @@ import { useUser } from './UserContext';
 import LandingPage from './components/LandingPage';
 import Home from './components/Home';
 import LogoutButton from './components/LogoutButton';
+import Sensors from './components/Sensors';
 
 function AppRoutes() {
   const { isConnected, principal, disconnect } = useConnect();
@@ -30,6 +31,7 @@ function AppRoutes() {
         <Routes>
           <Route path="/" element={<LandingPage onEnter={() => navigate('/home')} />} />
           <Route path="/home" element={<Home />} />
+          <Route path="/sensors" element = {<Sensors />} />
         </Routes>
       </main>
     </>
