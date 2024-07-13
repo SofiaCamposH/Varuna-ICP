@@ -16,6 +16,11 @@ Los microplásticos son un problema emergente ya que se han encontrado en ecosis
 # Implementacion de ICP 
 En este proyecto será utilizado el ICP para crear un sistema que funcione como foro o red social la cuál servirá para almacenar y mostrar la información sobre la calidad del agua tratada con nuestro sistema, rev¿cabando datos de las plantas tratadoras de agua que la usen, de esta manera aseguramos la trazabilidad, la transparencia y la seguridad de los datos ingresados.
 
+# Presentación
+
+A continuación adjunto el link a la presentación usada:
+- https://www.canva.com/design/DAGJ2ycstKs/4Ye8261r8LLTrQybAeRaHg/edit?utm_content=DAGJ2ycstKs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
 # Pasos para correr el proyecto:
 
 ## 1.- Instalar WSL
