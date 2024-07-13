@@ -7,6 +7,7 @@ import Home from './components/Home';
 import Sensors from './components/Sensors';
 import Chart from './components/Chart';
 import Header from './components/Header';
+import Resultados from './components/Resultados'; // Importa el nuevo componente
 
 function AppRoutes() {
   const { isConnected, principal, disconnect } = useConnect();
@@ -36,15 +37,11 @@ function AppRoutes() {
           <Route path="/home" element={<Home />} />
           <Route path="/sensors" element={<Sensors />} />
           <Route path="/chart" element={<Chart />} />
+          <Route path="/resultados" element={<Resultados />} /> {/* Añade la nueva ruta */}
         </Routes>
       </main>
     </>
   );
 }
 
-export default AppRoutes;
-
-
-
-
-
+export default AppRoutes
