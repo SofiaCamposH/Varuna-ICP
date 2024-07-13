@@ -73,7 +73,7 @@ Eliminación efectiva: Los filtros físicos cuidadosamente seleccionados garanti
 # Presentación
 
 A continuación adjunto el link a la presentación usada:
-- https://www.canva.com/design/DAGJ2ycstKs/4Ye8261r8LLTrQybAeRaHg/edit?utm_content=DAGJ2ycstKs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+- https://www.canva.com/design/DAGKzQzVXEs/IWsTEr_Ln6rG3vAOi6ML6w/edit
 
 # Pasos para correr el proyecto:
 
