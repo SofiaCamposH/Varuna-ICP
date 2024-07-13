@@ -7,6 +7,7 @@ import lupa from '../imagenes/lupita.png';
 import grafica from '../imagenes/Grafica (2).jpeg';
 import mensaje from '../imagenes/mensajito.jpeg';
 import personas from '../imagenes/personas.jpeg';
+import Sensors from './Sensors'; // Importar el componente Sensors
 
 const Header = ({ onLogout }) => {
     return (
@@ -44,6 +45,7 @@ const Header = ({ onLogout }) => {
                 </button>
                 <LogoutButton onLogout={onLogout} />
             </div>
+            <Sensors /> {/* Añadir el componente Sensors */}
         </header>
     );
 };
