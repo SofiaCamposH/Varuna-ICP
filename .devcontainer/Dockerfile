@@ -1,0 +1,1 @@
+FROM ghcr.io/dfinity/icp-dev-env:7
